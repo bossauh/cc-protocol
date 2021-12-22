@@ -53,7 +53,6 @@ MODULES = {
         getMethods = peripheral.getMethods,
         isPresent = peripheral.isPresent,
         getType = peripheral.getType,
-        hasType = peripheral.hasType
     },
     gps = {
         locate = gps.locate
