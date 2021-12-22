@@ -9,6 +9,7 @@ MODULES = {
         turnLeft = turtle.turnLeft,
         turnRight = turtle.turnRight,
         dig = turtle.dig,
+        digUp = turtle.digUp,
         digDown = turtle.digDown,
         place = turtle.place,
         placeUp = turtle.placeUp,
