@@ -48,6 +48,7 @@ MODULES = {
     },
     ["peripheral"] = {
         getNames = peripheral.getNames,
+        getName = peripheral.getName,
         call = peripheral.call,
         getMethods = peripheral.getMethods,
         isPresent = peripheral.isPresent,
