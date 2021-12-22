@@ -144,7 +144,7 @@ end
 function processCommand(parsed)
     -- Process the command and run it
     local func = MODULES[parsed.command.module][parsed.command["function"]]
-    local out = func(table.unpack(parsed.command.args))
+    local out = {func(table.unpack(parsed.command.args))}
     parsed.out = out
     return parsed
 end
