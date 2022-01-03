@@ -1,3 +1,5 @@
+require "apis"
+
 IN = "__in.coms"
 OUT = "__out.json"
 MODULES = {
@@ -55,5 +57,8 @@ MODULES = {
     },
     gps = {
         locate = gps.locate
+    },
+    server = {
+        ping = server_ping
     }
 }

@@ -1,1 +1,3 @@
--- Placeholder file for future features.
+function server_ping()
+    return "alive"
+end
