@@ -30,7 +30,7 @@ function read(params)
         line = h.readLine()
         h.close()
 
-        if os.epoch("utc") / 1000 - startTime > 0.1 then
+        if os.epoch("utc") / 1000 - startTime > 0.25 then
             break
         end
 
