@@ -133,6 +133,11 @@ function parseCommand(i)
             v = false
         end
 
+        -- If it's a "nil", convert it to a nil.
+        if v == "nil" then
+            v = nil
+        end
+
         table.insert(args, v)
     end
 
