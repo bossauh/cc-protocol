@@ -57,6 +57,8 @@ print("== Computercraft Receiver Server ==")
 print(string.format("-- Running: %s", os.version()))
 print(string.format("-- ID: %s | Label: %s", os.getComputerID(), os.getComputerLabel()))
 
+local commandsRan = 0
+
 while true do
     local cmd = read()
     local parsed = parseCommand(cmd)
@@ -73,6 +75,9 @@ while true do
             -- Run the command since parsing and validating actually ran properly
             parsed = processCommand(parsed)
             out(parsed)
+            print(string.format("%s. %s/%s --- %s", commandsRan, parsed["command"]["module"], parsed["command"]["function"], parsed["out"][1]))
+
+            commandsRan = commandsRan + 1
         end
     end
 
