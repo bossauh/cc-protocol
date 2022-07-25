@@ -84,5 +84,5 @@ while true do
     -- Prevent too long without yielding
     os.queueEvent("api")
     os.pullEvent()
-    os.sleep(0.001)
+    os.sleep(0.01)
 end
