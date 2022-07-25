@@ -20,6 +20,22 @@ function read(params)
     local h = fs.open(IN, "r")
     local line = h.readLine()
     h.close()
+    
+    local startTime = os.epoch("utc") / 1000
+    while line == nil do
+        h = fs.open(IN, "r")
+        if h == nil then
+            break
+        end
+        line = h.readLine()
+        h.close()
+
+        if os.epoch("utc") / 1000 - startTime > 0.1 then
+            break
+        end
+
+        os.sleep(0.05)
+    end
 
     if doClear then
         clear(IN)
